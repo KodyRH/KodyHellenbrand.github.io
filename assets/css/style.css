@@ -142,7 +142,7 @@ nav ul li a {
   align-items: center; /* Horizontally center the content */
   text-align: center; /* Ensure the text is centered */
   width: 75vw; /* Makes the container span 75% of the viewport width */
-  height: 50vh; /* Makes the container take up 50% of the viewport height */
+  min-height: 50vh;; /* Makes the container take up 50% of the viewport height */
   margin: 0 auto; /* Centers the container horizontally */
 }
 
