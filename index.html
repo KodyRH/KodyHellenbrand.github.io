@@ -1,143 +1,200 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Flip Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+   
 </head>
+
 <body>
 
-  <main>
-    <!-- About Section -->
-    <div id="mission-statement" class="about-section animate__animated animate__fadeInDown">
-      <h2>About Me</h2>
-      <p id="mission-statement">
-        Hi, I'm Kody Hellenbrand!  
-        I'm a passionate and driven software developer always striving to expand my skills and push the boundaries of my technical knowledge. 
-        I thrive on solving challenges, building innovative solutions, and creating software that makes a meaningful impact on people's lives. 
-        Collaboration and continuous learning fuel my motivation, and I’m always eager to uplift others and contribute wherever I can.
-      </p>
-    </div>
+    <main>
+        <!-- About Section -->
+        <div id="mission-statement" class="about-section animate__animated animate__fadeInDown">
+            <h2>About Me</h2>
+            <p id="mission-statement">
+                Hi, I'm Kody Hellenbrand!
+                I'm a passionate and driven software developer always striving to expand my skills and push the boundaries of my technical knowledge.
+                I thrive on solving challenges, building innovative solutions, and creating software that makes a meaningful impact on people's lives.
+                Collaboration and continuous learning fuel my motivation, and I’m always eager to uplift others and contribute wherever I can.
+            </p>
+        </div>
 
-    <!-- Experience Section -->
-    <div id="experience" class="container my-5 animate__animated animate__fadeInDown">
-      <h1>Experience</h1>
-      <div class="row d-flex justify-content-center">
-        <!-- Work Experience Card -->
-        <div class="col-md-6 col-12 d-flex">
-          <div class="card h-100 d-flex flex-column w-100 shadow">
-            <img src="assets/images/sentryinsurance_logo.jpg" class="card-img-top" alt="Sentry Insurance">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Work Experience</h5>
-              <p class="card-text">Software Developer | 2023 - Present</p>
+        <!-- Experience Section -->
+        <div id="experience">
+            <!-- Work Experience Flip Card -->
+            <div class="flip-card" id="workCard">
+                <div class="flip-card-inner">
+                    <!-- Front Side -->
+                    <div class="flip-card-front">
+                        <img src="assets/images/sentryinsurance_logo.jpg" class="card-img-top" alt="Sentry Insurance">
+                        <h5>Work Experience</h5>
+                        <p>Software Developer | 2023 - Present</p>
+                        <button class="btn btn-primary" id="workFlipToBack">See More</button>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="flip-card-back">
+                        <div class="card-header">
+                            <h5>Key Responsibilities:</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Migrated a legacy application from VB to a Java backend with a Vue.js frontend; the application calculates compensation for direct writers and underwriters.</li>
+                                <li>Developed an internal tool with a C# backend and Vue.js frontend to monitor data pipelines performance and health.</li>
+                                <li>Developed a web-based search tool for co-op students to share, like, and favorite useful links; built using C#, Razor Pages, Bootstrap, and SQL.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" id="workFlipToFront">Back to Front</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Education Card -->
-        <div class="col-md-6 col-12 d-flex">
-          <div class="card h-100 d-flex flex-column w-100 shadow">
-            <img src="assets/images/UW-Stevens_Point_Logo.jpg" class="card-img-top" alt="University Logo">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Education</h5>
-              <p class="card-text">Bachelor’s In Computer Information Systems</p>
+            <!-- Education Flip Card -->
+            <div class="flip-card" id="educationCard">
+                <div class="flip-card-inner">
+                    <!-- Front Side -->
+                    <div class="flip-card-front">
+                        <img src="assets/images/UW-Stevens_Point_Logo.jpg" class="card-img-top" alt="Stevens Point Logo">
+                        <h5>Education</h5>
+                        <p>Bachelor’s In Computer Information Systems</p>
+                        <button class="btn btn-primary" id="educationFlipToBack">See More</button>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="flip-card-back">
+                        <div class="card-header">
+                            <h5>Key Highlights:</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Gained hands-on experience in C# and Java with data structures and algorithms through coursework and projects.</li>
+                                <li>Built a full-stack web application for a real-world client in the CNMT 480 capstone course.</li>
+                                <li>Completed web development courses covering both front-end and back-end technologies.</li>
+                                <li>Applied UX/UI principles to design user-friendly and visually consistent web interfaces.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" id="educationFlipToFront">Back to Front</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div id="projects" class="Project_container">
-      <h2>My Projects</h2>
-      <p>Currently, I am working on building my portfolio. Check back for more projects!</p>
-      <div class="project-cards">
-
-        <!-- Project Card 1 -->
-        <div class="card project-card animate__animated animate__fadeInUp">
-          <div class="card-body">
-            <h5 class="card-title">PHP (People Helping People)</h5>
-            <p class="card-text">A group project to develop a website that connects community volunteers with people in need of assistance. </p>
-            <p class="card-text">Bulit with HTML, CSS, JavaScript</p>
-            <a href="https://github.com/Zoobaru820/phpWebsite" target="_blank" class="btn btn-primary">View Repository</a>
-          </div>
         </div>
 
-        <!-- Project Card 2 -->
-        <div class="card project-card animate__animated animate__fadeInUp">
-          <div class="card-body">
-            <h5 class="card-title">e-commerce website</h5>
-            <p class="card-text">Offering clothing with unique vectors.</p>
-            <p class="card-text">Front-end project built with vue.js and stripe.</p>
-            <a href="https://github.com/KodyRH/ecommerce_site" target="_blank" class="btn btn-primary">View Repository</a>
-          </div>
+        <!-- Projects Section -->
+        <div id="projects" class="Project_container">
+            <h2>Projects</h2>
+            <p>Currently, I am working on building my portfolio. Check back for more projects!</p>
+            <div class="project-cards">
+
+                <!-- Project Card 1 -->
+                <div class="card project-card animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">PHP (People Helping People)</h5>
+                        <p class="card-text">A group project to develop a website that connects community volunteers with people in need of assistance. </p>
+                        <p class="card-text">Bulit with HTML, CSS, JavaScript</p>
+                        <a href="https://github.com/Zoobaru820/phpWebsite" target="_blank" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="card project-card animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">e-commerce website</h5>
+                        <p class="card-text">Offering clothing with unique vectors.</p>
+                        <p class="card-text">Front-end project built with vue.js and stripe.</p>
+                        <a href="https://github.com/KodyRH/ecommerce_site" target="_blank" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="card project-card animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">e-commerce website</h5>
+                        <p class="card-text">Offering clothing with unique vectors.</p>
+                        <p class="card-text">Front-end project built with vue.js and stripe.</p>
+                        <a href="https://github.com/KodyRH/ecommerce_site" target="_blank" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-         <!-- Project Card 3 -->
-        <div class="card project-card animate__animated animate__fadeInUp">
-          <div class="card-body">
-            <h5 class="card-title">e-commerce website</h5>
-            <p class="card-text">Offering clothing with unique vectors.</p>
-            <p class="card-text">Front-end project built with vue.js and stripe.</p>
-            <a href="https://github.com/KodyRH/ecommerce_site" target="_blank" class="btn btn-primary">View Repository</a>
-          </div>
+        <!-- Case Studies Section -->
+        <div id="case-studies" class="CaseStudies_container my-5">
+            <h2>Case Studies</h2>
+            <p>Here are some detailed case studies showcasing my problem-solving skills and project impact.</p>
+            <a href="case-studies.html" class="btn btn-primary">View Case Studies</a>
         </div>
-      </div>
-    </div>
 
+        <div class="Skills_container">
+            <h2>My Skills</h2>
+            <div class="skills-icons">
+                <i class="fab fa-html5 html-icon" title="HTML5"></i>
+                <i class="fab fa-css3-alt css-icon" title="CSS3"></i>
+                <i class="fab fa-js-square js-icon" title="JavaScript"></i>
+                <i class="fab fa-java java-icon" title="Java"></i>
+                <i class="devicon-csharp-plain" title="C#"></i>
+                <i class="fab fa-vuejs vue-icon" title="Vue.js"></i>
+                <i class="fas fa-database sql-icon" title="SQL Server Management Studio (SSMS)"></i>
+                <i class="fab fa-bitbucket bitbucket-icon" title="bitbucket"></i>
+                <i class="fab fa-git git-icon " title="git"></i>
 
-   <div class="Skills_container">
-      <h2>My Skills</h2>
-      <div class="skills-icons">
-          <i class="fab fa-html5 html-icon" title="HTML5"></i>
-          <i class="fab fa-css3-alt css-icon" title="CSS3"></i>
-          <i class="fab fa-js-square js-icon" title="JavaScript"></i>
-          <i class="fab fa-java java-icon" title="Java"></i>
-          <i class="devicon-csharp-plain" title="C#"></i>  
-          <i class="fab fa-vuejs vue-icon" title="Vue.js"></i>
-          <i class="fas fa-database sql-icon" title="SQL Server Management Studio (SSMS)"></i>
-          <i class="fab fa-bitbucket bitbucket-icon" title="bitbucket"></i>
-          <i class="fab fa-git git-icon " title="git"></i>
-          
-      </div>
-  </div>
+            </div>
+        </div>
 
-    <!-- Contact Section -->
-    <footer id="contact">
-      <div class="Contact_container">
-        <h1>Connect With Me</h1>
-        <ul class="social-links">
-          <li>
-            <a href="https://github.com/KodyRH" target="_blank">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/kody-hellenbrand-247118205/" target="_blank">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="mailto:kodyhellenbrand30@gmail.com">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  </main>
+        <!-- Contact Section -->
+        <footer id="contact">
+            <div class="Contact_container">
+                <h1>Connect With Me</h1>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/KodyRH" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/kody-hellenbrand-247118205/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:kodyhellenbrand30@gmail.com">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to handle flipping for the Work Experience card
+        document.getElementById('workFlipToBack').addEventListener('click', function () {
+            const workCard = document.getElementById('workCard');
+            workCard.classList.add('flipped');
+        });
+
+        document.getElementById('workFlipToFront').addEventListener('click', function () {
+            const workCard = document.getElementById('workCard');
+            workCard.classList.remove('flipped');
+        });
+
+        // JavaScript to handle flipping for the Education card
+        document.getElementById('educationFlipToBack').addEventListener('click', function () {
+            const educationCard = document.getElementById('educationCard');
+            educationCard.classList.add('flipped');
+        });
+
+        document.getElementById('educationFlipToFront').addEventListener('click', function () {
+            const educationCard = document.getElementById('educationCard');
+            educationCard.classList.remove('flipped');
+        });
+    </script>
 </body>
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
-<script type="module" src="assets/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>

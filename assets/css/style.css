@@ -1,5 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+
+/* Global Styles */
+
 
 html, body {
   margin: 0;
@@ -35,59 +38,10 @@ main {
   padding: 20px;
 }
 
-.animation-container {
-  width: 25vw; /* Adjust this as needed */
-  height: 25vh; /* Adjust this as needed */
-  display: flex;
-  justify-content: center; /* Horizontally center content inside the container */
-  align-items: center;    /* Vertically center content inside the container */
-  overflow: hidden; /* Ensures nothing gets cut off */
-}
-
-nav {
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%;
-  position: relative; /* Ensures it doesn't follow the scroll */
-  background-color: transparent; /* No background color */
-  box-sizing: border-box;
-}
+/* End Global Styles */
 
 
-nav ul {
-  display: flex;
-  justify-content: center; /* Center the list items horizontally */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white; /* Text color */
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 20px;
-  display: block;
-  border-radius: 5px; /* Adds rounded corners to the links */
-  transition: all 0.3s ease; /* Animation effect */
-}
-
-/* Background color when hovering */
-nav ul li a:hover {
-  background-color: #333; /* Dark gray background for hover */
-  color: #fff; /* Keep text color white */
-  transform: scale(1.1); /* Slightly enlarge the link on hover */
-}
-
-/* Animation effect for the nav */
-nav ul li a {
-  animation: fadeInUp 0.5s ease-in-out;
-}
-
+/* About section */
 .about-section {
   text-align: center;
   max-width: 800px;
@@ -104,36 +58,119 @@ nav ul li a {
   font-size: 18px;
   line-height: 1.6;
 }
+/* End of About section */
 
-.container {
-  max-width: 50%;
-  padding: 0 !important;
-  margin: 0 auto;
+/* experience section */
+
+    #experience {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            height: 100vh;
+        }
+        
+.flip-card {
+  display: flex;
+  background-color: transparent;
+  width: 25rem; /* Consistent width */
+  height: 31.25rem; /* Consistent height */
+  perspective: 1000rem;
 }
-.container h1 {
- text-align: center;
- margin-bottom: 5vh;
-}
 
-
-.card-img-top {
-  height: auto; /* Adjust as needed */
-  object-fit: cover; /* Ensures images scale properly */
+.flip-card-inner {
+  position: relative;
   width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.card {
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+flip-card-front {
+  background-color: white;
+  color: black;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.flip-card-front img {
+  margin-bottom: 1rem; /* Add spacing between the image and the title */
+}
+
+.flip-card-front h5, .flip-card-back h5 {
+  font-weight: bold;
+  margin-bottom: 1rem; /* Consistent spacing */
+ 
+}
+
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content */
+  align-items: center;
+  padding: 2rem;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1rem; /* Consistent spacing */
 }
 
 .card-body {
-  
+  flex-grow: 1; /* Allow the body to take up remaining space */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers text vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align responsibilities to the left */
+  width: 100%;
 }
+
+.card-body ul {
+  list-style-type: disc; /* Use a disc for the bullet points */
+  list-style-position: inside; /* Align the bullet points with the text */
+  padding: 0;
+  margin: 0;
+}
+
+.card-body ul li {
+  margin-bottom: 0.5rem; /* Add spacing between list items */
+}
+
+.btn {
+  margin-top: 1rem;
+}
+/* End of experience section */
+
+
+
+
+
+
+
+
+/* Project section styling  */
 
 .Project_container {
   display: flex;
@@ -189,6 +226,20 @@ nav ul li a {
   cursor: pointer;
 }
 
+/* Project section styling  */
+
+/* Case studies styling */
+
+.CaseStudies_container {
+  max-width: 800px; /* Optional: Limit the width for better readability */
+  margin: 0 auto; /* Center the section horizontally */
+  text-align: center; /* Center the text */
+}
+
+/* End of Case studies styling */
+
+
+/* Skills section styling */
 
 .Skills_container {
   text-align: center;
@@ -224,7 +275,11 @@ nav ul li a {
   transform: scale(1.2);
 }
 
-/* footer styling */
+
+/*  End of Skills section styling */
+
+
+/* Contact section styling */
 
 .Contact_container {
   text-align: center;
@@ -269,3 +324,9 @@ nav ul li a {
 .Contact_container i {
   font-size: 24px;
 }
+/* End of Contact section styling */
+
+
+
+
+
