@@ -165,12 +165,7 @@ flip-card-front {
 
 
 
-
-
-
-
-
-/* Project section styling  */
+/* Project section styling */
 
 .Project_container {
   display: flex;
@@ -187,53 +182,65 @@ flip-card-front {
   margin: 20px 0; /* Adds space between the heading and paragraph */
 }
 
+
+.Project_container h2 {
+ text-decoration: underline ;
+}
+/* Project Cards Styling */
 .project-cards {
   display: flex;
-  flex-direction: row; /* Align the cards horizontally */
-  justify-content: center; /* Centers the cards horizontally */
-  gap: 20px; /* Adds space between the cards */
-  width: 100%; /* Ensure the cards take up the full width of the container */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between cards */
 }
 
 .project-card {
-  height: 100%; /* Ensure all cards take up full height */
-  width: 30%; /* Width of each card, adjust as needed */
+  width: 20rem; /* Set a consistent width */
+  height: 22rem; /* Set a consistent height */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures the button stays at the bottom */
-  border-radius: 10px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for a soft effect */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 1rem;
+  background-color: white; /* Ensure background color is visible */
 }
 
 .project-card .card-body {
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures content stays within card */
-  height: 100%; /* Make sure the body fills the card height */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1; /* Ensure content takes up available space */
+}
+
+.project-card h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-card .btn-primary {
-  background-color: #007bff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: auto; /* Pushes the button to the bottom of the card */
+  margin-top: auto; /* Push the button to the bottom */
 }
-
-.project-card .btn-primary:hover {
-  background-color: #0056b3;
-  cursor: pointer;
-}
-
-/* Project section styling  */
 
 /* Case studies styling */
 
 .CaseStudies_container {
   max-width: 800px; /* Optional: Limit the width for better readability */
-  margin: 0 auto; /* Center the section horizontally */
+  margin: 2rem auto; /* Center the section horizontally */
   text-align: center; /* Center the text */
+}
+
+.CaseStudies_container h2 {
+  text-decoration: underline;
 }
 
 /* End of Case studies styling */
@@ -247,6 +254,10 @@ flip-card-front {
   margin-bottom: 30px;
 }
 
+
+.Skills_container h2 {
+ text-decoration: underline;
+}
 .skills-icons {
   display: flex;
   justify-content: center;
